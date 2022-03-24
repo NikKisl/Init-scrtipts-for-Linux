@@ -1,1 +1,1 @@
-### First scriptst for work
+### First script for work
