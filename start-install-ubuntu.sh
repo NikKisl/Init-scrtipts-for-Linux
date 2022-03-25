@@ -1,7 +1,8 @@
 #!/bin/bash
 sudo apt update -y
-sudo apt install virtualbox && vagrant && nvim && software-properties-common -y
+sudo apt install virtualbox && vagrant && neovim && software-properties-common && git && curl -y
 rm -rf ~/.config/nvim/init.vim
+git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
 sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt install -y \
     ansible \
@@ -15,3 +16,4 @@ echo \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/nullgit clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+
