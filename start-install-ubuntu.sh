@@ -1,7 +1,15 @@
 #!/bin/bash
 sudo apt update -y
-sudo apt install virtualbox && vagrant && neovim && software-properties-common && git && curl -y
+sudo apt install virtualbox && vagrant && neovim && software-properties-common && git && curl && fuse && libfuse2 && wget && git && python3-pip && ack-grep -y
 rm -rf ~/.config/nvim/init.vim
+cd ~
+wget --quiet https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage --output-document nvim
+sudo chmod +x nvim
+sudo chown root:root nvim
+sudo mv nvim /usr/bin
+cd ~
+mkdir -p .config/nvim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
 sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt install -y \
