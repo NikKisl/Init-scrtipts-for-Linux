@@ -10,7 +10,7 @@ sudo mv nvim /usr/bin
 cd ~
 mkdir -p .config/nvim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
+sudo git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
 sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt install -y \
     ansible \
